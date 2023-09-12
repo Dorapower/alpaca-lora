@@ -1,0 +1,6 @@
+{
+    "description": "Template used by Prompt Refiner.",
+    "prompt_input": "Below is an instruction with an input, based on the input, refine the original instruction to improve its clarity and comprehensibility, without altering the context.\n\n### Input:\n{input}\n\n### Original: \n{instruction}\n\n### Refined:\n",
+    "prompt_no_input": "Below is an instruction that describes a task. Refine the original instruction to improve its clarity and comprehensibility, without altering the context.\n\n### Original:\n{instruction}\n\n### Refined:\n",
+    "response_split": "### Refined:"    
+}

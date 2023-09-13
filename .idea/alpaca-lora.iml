@@ -8,8 +8,11 @@
       <excludeFolder url="file://$MODULE_DIR$/models" />
       <excludeFolder url="file://$MODULE_DIR$/templates/.ipynb_checkpoints" />
     </content>
-    <orderEntry type="jdk" jdkName="alpaca-lora" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="alpaca-lora-310" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PackageRequirementsSettings">
+    <option name="versionSpecifier" value="Don't specify version" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />

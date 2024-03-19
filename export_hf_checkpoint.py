@@ -5,10 +5,13 @@ import transformers
 from peft import PeftModel
 from transformers import LlamaForCausalLM, LlamaTokenizer  # noqa: F402
 
-BASE_MODEL = os.environ.get("BASE_MODEL", None)
+BASE_MODEL = os.environ.get("BASE_MODEL", "./models/llama-7b-hf")
 assert (
     BASE_MODEL
 ), "Please specify a value for BASE_MODEL environment variable, e.g. `export BASE_MODEL=huggyllama/llama-7b`"  # noqa: E501
+
+LORA_MODEL = os.environ.get("LORA_MODEL", "./lora-models/lora-alpaca")
+HF_MODEL = os.environ.get("HF_MODEL", "./models/lora-alpaca")
 
 tokenizer = LlamaTokenizer.from_pretrained(BASE_MODEL)
 
@@ -24,7 +27,7 @@ first_weight_old = first_weight.clone()
 
 lora_model = PeftModel.from_pretrained(
     base_model,
-    "tloen/alpaca-lora-7b",
+    LORA_MODEL,
     device_map={"": "cpu"},
     torch_dtype=torch.float16,
 )
@@ -51,5 +54,5 @@ deloreanized_sd = {
 }
 
 LlamaForCausalLM.save_pretrained(
-    base_model, "./hf_ckpt", state_dict=deloreanized_sd, max_shard_size="400MB"
+    base_model, HF_MODEL, state_dict=deloreanized_sd, max_shard_size="400MB"
 )

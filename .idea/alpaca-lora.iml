@@ -7,6 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/datasets/alpaca/.ipynb_checkpoints" />
       <excludeFolder url="file://$MODULE_DIR$/models" />
       <excludeFolder url="file://$MODULE_DIR$/templates/.ipynb_checkpoints" />
+      <excludeFolder url="file://$MODULE_DIR$/shell/.ipynb_checkpoints" />
+      <excludeFolder url="file://$MODULE_DIR$/lora-models" />
     </content>
     <orderEntry type="jdk" jdkName="alpaca-lora-310" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

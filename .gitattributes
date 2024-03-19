@@ -1,0 +1,4 @@
+alpaca_data_cleaned_archive.json filter=lfs diff=lfs merge=lfs -text
+alpaca_data_gpt4.json filter=lfs diff=lfs merge=lfs -text
+alpaca_data.json filter=lfs diff=lfs merge=lfs -text
+*.jsonl filter=lfs diff=lfs merge=lfs -text
